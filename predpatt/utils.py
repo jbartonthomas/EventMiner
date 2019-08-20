@@ -21,5 +21,6 @@ class RabbitClient(object):
 
     def receive(self, callback):
         self.channel.basic_qos(prefetch_count=1)
+	
         self.channel.basic_consume(callback, queue=self.queue)
         self.channel.start_consuming()

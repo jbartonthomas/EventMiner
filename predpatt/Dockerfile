@@ -8,6 +8,9 @@ ENV PYTHONPATH="${PYTHONPATH}:/opt/tensorflow/syntaxnet/bazel-bin/dragnn/tools/o
 
 RUN mkdir /src
 ADD . /src
-RUN pip install -r /src/requirements.txt
+
+RUN /usr/local/bin/pip install --upgrade pip
+RUN /usr/local/bin/pip install --upgrade setuptools
+RUN /usr/local/bin/pip install -r /src/requirements.txt
 
 CMD ["/src/wait-for", "rabbitmq:5672", "-t", "30", "--", "python", "/src/app.py"]

@@ -1,2 +1,2 @@
 keras==1.0.6
-pika
+pika==0.10.0

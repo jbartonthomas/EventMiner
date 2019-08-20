@@ -1,7 +1,6 @@
 FROM python:2.7-alpine
 
 MAINTAINER John Beieler <jbeiele1@jhu.edu>
-
 RUN apk add --no-cache git build-base curl
 
 RUN mkdir /src

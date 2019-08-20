@@ -10,4 +10,4 @@ tornado==4.2
 simplejson==3.6.5
 Werkzeug==0.10.4
 python-dateutil
-pika
+pika==0.10.0
